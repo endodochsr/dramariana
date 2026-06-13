@@ -9,13 +9,12 @@
 <meta name="author" content="Dra. Mariana Venancio" />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <meta name="theme-color" content="#070a14" />
-<link rel="canonical" href="https://www.endodelivery.com.br/" />
+<link rel="canonical" href="https://dramarianapaz.com.br/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23070a14'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' fill='%23e9c489' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E" />
 
-<!-- Geo -->
+<!-- Área de atuação (serviço móvel, sem endereço fixo) -->
 <meta name="geo.region" content="BR-SP" />
-<meta name="geo.placename" content="São Paulo" />
-<meta name="geo.position" content="-23.55052;-46.633308" />
-<meta name="ICBM" content="-23.55052, -46.633308" />
+<meta name="geo.placename" content="São Paulo e Grande São Paulo" />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -23,12 +22,15 @@
 <meta property="og:site_name" content="Endodelivery — Dra. Mariana Venancio" />
 <meta property="og:title" content="Endodontia Delivery no seu Consultório | Dra. Mariana Venancio" />
 <meta property="og:description" content="Endodontista especialista atendendo no seu consultório em São Paulo e Grande SP. Microscópio, casos complexos e agilidade. Foque na sua especialidade — o canal é comigo." />
-<meta property="og:url" content="https://www.endodelivery.com.br/" />
+<meta property="og:url" content="https://dramarianapaz.com.br/" />
 <meta property="og:image" content="https://static.wixstatic.com/media/a26553_276ad06b39d24a3182bc22234104df04~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,enc_auto/og.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="Endodontia Delivery no seu Consultório | Dra. Mariana Venancio" />
 <meta name="twitter:description" content="Endodontista atendendo no seu consultório em São Paulo e Grande SP. Microscópio, casos complexos e agilidade." />
+<meta name="twitter:image" content="https://static.wixstatic.com/media/a26553_276ad06b39d24a3182bc22234104df04~mv2.jpg/v1/fill/w_1200,h_630,al_c,q_85,enc_auto/og.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,12 +41,14 @@
 {
   "@context": "https://schema.org",
   "@type": "Dentist",
+  "@id": "https://dramarianapaz.com.br/#dentist",
   "name": "Dra. Mariana Venancio — Endodelivery",
-  "description": "Endodontista (especialista em tratamento de canal) que atende no consultório de cirurgiões-dentistas e clínicas em São Paulo e Grande São Paulo. Atendimento delivery com microscópio operatório, retratamentos e casos complexos.",
+  "description": "Endodontista (especialista em tratamento de canal) contratada por cirurgiões-dentistas e clínicas para atender no consultório do parceiro em São Paulo e Grande São Paulo. Serviço móvel (delivery) com microscópio operatório, retratamentos e casos complexos.",
   "image": "https://static.wixstatic.com/media/a26553_276ad06b39d24a3182bc22234104df04~mv2.jpg",
-  "url": "https://www.endodelivery.com.br/",
+  "url": "https://dramarianapaz.com.br/",
   "telephone": "+5511959845410",
   "priceRange": "$$",
+  "currenciesAccepted": "BRL",
   "medicalSpecialty": "Endodontic",
   "areaServed": [
     { "@type": "City", "name": "São Paulo" },
@@ -53,8 +57,18 @@
     { "@type": "City", "name": "Guarulhos" },
     { "@type": "City", "name": "Osasco" }
   ],
-  "address": { "@type": "PostalAddress", "addressLocality": "São Paulo", "addressRegion": "SP", "addressCountry": "BR" },
-  "geo": { "@type": "GeoCoordinates", "latitude": -23.55052, "longitude": -46.633308 },
+  "serviceArea": [
+    { "@type": "City", "name": "São Paulo" },
+    { "@type": "AdministrativeArea", "name": "Grande São Paulo" }
+  ],
+  "founder": {
+    "@type": "Person",
+    "name": "Dra. Mariana Venancio",
+    "jobTitle": "Cirurgiã-dentista especialista em Endodontia",
+    "identifier": { "@type": "PropertyValue", "propertyID": "CRO-SP", "value": "121501" },
+    "memberOf": { "@type": "Organization", "name": "Conselho Regional de Odontologia de São Paulo (CRO-SP)" }
+  },
+  "address": { "@type": "PostalAddress", "addressRegion": "SP", "addressCountry": "BR" },
   "sameAs": ["https://www.instagram.com/mari.endodelivery/", "https://www.tiktok.com/@mari.endodelivery"],
   "knowsAbout": ["Endodontia", "Tratamento de canal", "Retratamento endodôntico", "Endodontia com microscópio", "Urgência endodôntica"],
   "availableService": [
@@ -518,6 +532,7 @@
       <p>Levo microscópio operatório e estrutura completa até o seu consultório, do caso simples ao mais desafiador. Minha proposta é simples: resolver o canal com previsibilidade e devolver o dente pronto para você concluir.</p>
       <div class="creds">
         <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Especialista em Endodontia</span>
+        <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>CRO-SP 121501</span>
         <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>Atendimento com microscópio</span>
         <span><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>SP capital e Grande SP</span>
       </div>
@@ -569,7 +584,7 @@
     <div class="foot-grid">
       <div>
         <div class="foot-brand">Mariana Venancio</div>
-        <p>Endodontia delivery de excelência no seu consultório. Tratamento de canal especializado para dentistas e clínicas de São Paulo e Grande SP.</p>
+        <p>Dra. Mariana Venancio · CRO-SP 121501<br>Endodontia delivery de excelência no seu consultório. Tratamento de canal especializado para dentistas e clínicas de São Paulo e Grande SP.</p>
         <div class="socials">
           <a href="https://www.instagram.com/mari.endodelivery/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
           <a href="https://www.tiktok.com/@mari.endodelivery" target="_blank" rel="noopener" aria-label="TikTok"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/></svg></a>
