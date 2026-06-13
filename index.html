@@ -267,7 +267,7 @@
   /* AGENDA */
   .agenda-wrap{max-width:920px;margin:0 auto;position:relative}
   .agenda-frame{position:relative;border-radius:26px;padding:10px;background:linear-gradient(135deg,rgba(52,227,255,.5),rgba(123,108,255,.35),rgba(233,196,137,.4));box-shadow:0 30px 80px rgba(0,0,0,.5)}
-  .agenda-frame .inner{position:relative;border-radius:18px;overflow:hidden;background:#fff;height:720px}
+  .agenda-frame .inner{position:relative;border-radius:18px;overflow:hidden;background:#fff;height:760px;transition:height .3s ease}
   .agenda-frame iframe{width:100%;height:100%;border:0;display:block}
   .agenda-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 18px;background:#0a5d5c;color:#eafffb}
   .agenda-bar .lhs{display:flex;align-items:center;gap:10px;font-size:.92rem;font-weight:500}
@@ -277,7 +277,7 @@
   .agenda-bar a:hover{opacity:1}
   .agenda-note{text-align:center;margin-top:20px;font-size:.9rem;color:var(--txt-dim)}
   .agenda-note a{color:var(--cyan);font-weight:500}
-  @media(max-width:540px){.agenda-frame .inner{height:640px}}
+  @media(max-width:540px){.agenda-frame .inner{height:680px}}
 
   .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s cubic-bezier(.2,.8,.2,1),transform .8s cubic-bezier(.2,.8,.2,1)}
   .reveal.in{opacity:1;transform:none}
@@ -433,7 +433,7 @@
           </a>
         </div>
         <div class="inner">
-          <iframe src="https://endodoc.com.br/dramariana?embed=1" title="Agenda de consultas — Dra. Mariana Venancio (EndoDoc)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <iframe id="agenda-iframe" src="https://endodoc.com.br/dramariana?embed=1" title="Agenda de consultas — Dra. Mariana Venancio (EndoDoc)" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
       <p class="agenda-note">Prefere falar antes? <a href="https://wa.me/5511959845410?text=Ol%C3%A1%20Dra.%20Mariana!%20Quero%20agendar%20um%20atendimento%20de%20endodontia%20delivery." target="_blank" rel="noopener">Chame no WhatsApp →</a></p>
@@ -613,6 +613,16 @@
   }
   const cObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){runCount(e.target);cObs.unobserve(e.target);}});},{threshold:.6});
   document.querySelectorAll('[data-count]').forEach(el=>cObs.observe(el));
+
+  // Ajuste automático da altura da agenda (EndoDoc embed)
+  window.addEventListener('message',function(e){
+    if(typeof e.origin==='string' && e.origin.indexOf('endodoc.com.br')===-1) return;
+    const d=e.data;
+    if(d && d.type==='endodoc-embed-height' && d.height){
+      const inner=document.querySelector('.agenda-frame .inner');
+      if(inner){ const h=Math.max(420,Math.min(d.height,2000)); inner.style.height=h+'px'; }
+    }
+  });
 </script>
 </body>
 </html>
